@@ -23,9 +23,14 @@ steps:
       - '--project'
       - 'finspring-docs'
       - '--container'
+      - 'oauth2-proxy'
+      - '--image'
+      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/oauth2-proxy@sha256:87182a111468b419c262d690728df9fd0959de6e56c05f11f58b863f63d90081'
+      - '--container'
       - 'docusaurus'
       - '--image'
       - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/docusaurus:search-edit-update'
+
 images:
   - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/docusaurus:search-edit-update'
 
