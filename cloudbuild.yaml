@@ -26,7 +26,8 @@ steps:
       - 'docusaurus'
       - '--image'
       - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/docusaurus:search-edit-update'
-
+      - '--port'
+      - '8081'
 images:
   - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/docusaurus:search-edit-update'
 
