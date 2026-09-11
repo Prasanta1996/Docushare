@@ -11,3 +11,6 @@ sidebar_label: Face ID Simulator
 The Simulator has no real Face ID hardware, so the SDK's biometric step falls back to an “Enter iPhone Passcode” prompt.
 
 To exercise the real Face ID path, enable **Simulator → Features → Face ID → Enrolled**, then **Features → Face ID → Matching Face** when the prompt appears — or test on a physical device with Face ID configured.
+
+# 4. IOSSS TEST Setup
+Hello Hello Testing IOS device APK Flutter 
