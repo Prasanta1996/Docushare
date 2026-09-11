@@ -9,3 +9,4 @@ sidebar_label: Android Permissions
 Nothing to do manually. The SDK declares its own permissions (`INTERNET`, `ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`) and native dependencies in its own `build.gradle` / `AndroidManifest.xml`; Gradle's manifest merger folds them into your app automatically.
 
 Just rebuild.
+i am prasanta kumar dash 
