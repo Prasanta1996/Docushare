@@ -3,28 +3,32 @@ steps:
     args:
       - 'build'
       - '-t'
-      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/search-edit-update:latest'
+      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/docusaurus:search-edit-update'
       - '.'
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/search-edit-update:latest'
+      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/docusaurus:search-edit-update'
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args:
       - 'run'
-      - 'deploy'
+      - 'services'
+      - 'update'
       - 'finspring-docs'
-      - '--image'
-      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/search-edit-update:latest'
       - '--region'
       - 'asia-south1'
       - '--project'
       - 'finspring-docs'
+      - '--container'
+      - 'docusaurus'
+      - '--image'
+      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/docusaurus:search-edit-update'
 
 images:
-  - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/search-edit-update:latest'
+  - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/docusaurus:search-edit-update'
+
 options:
   logging: CLOUD_LOGGING_ONLY
