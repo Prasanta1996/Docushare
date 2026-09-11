@@ -77,12 +77,6 @@ const sidebars = {
       collapsed: true,
       items: ['fixed-deposit-sdk/play-store-permission'],
     },
-    {
-    type: 'category',
-      label: '11. Prasanta Dash,
-      collapsed: true,
-      items: ['fixed-deposit-sdk/Prasanta'],
-    },
   ],
 };
 
