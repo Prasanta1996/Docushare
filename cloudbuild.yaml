@@ -26,3 +26,5 @@ steps:
 
 images:
   - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/search-edit-update:latest'
+options:
+  logging: CLOUD_LOGGING_ONLY
