@@ -1,0 +1,28 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/search-edit-update:latest'
+      - '.'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'push'
+      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/search-edit-update:latest'
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - 'finspring-docs'
+      - '--image'
+      - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/search-edit-update:latest'
+      - '--region'
+      - 'asia-south1'
+      - '--project'
+      - 'finspring-docs'
+
+images:
+  - 'asia-south1-docker.pkg.dev/finspring-docs/finspring-docs/search-edit-update:latest'
