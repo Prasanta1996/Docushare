@@ -121,7 +121,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'SDK Guied',
+                label: 'SDK Guide',
                 to: '/docs/fixed-deposit-sdk/overview',
               },
               {
